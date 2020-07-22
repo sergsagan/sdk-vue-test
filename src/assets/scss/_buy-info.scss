@@ -1,0 +1,147 @@
+@import 'variables';
+
+.buy-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 72px);
+  color: $text-color-light;
+  background: $bg-color-gradient;
+  text-align: left;
+  overflow-y: auto;
+  cursor: pointer;
+
+  @include media('<768px') {
+    width: calc(100% - 30px);
+    height: 30px;
+    padding: 15px;
+    z-index: 25;
+  }
+
+  &--open {
+    height: 200px;
+  }
+
+  &__container {
+    flex: 1;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 24px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+
+    @include media('<960px') {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 28px;
+
+    @include media('<960px') {
+      margin-bottom: 15px;
+    }
+
+    li {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+
+      @include media('<960px') {
+        font-size: 15px;
+      }
+    }
+
+    &--small-text {
+      margin-bottom: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        line-height: 26px;
+
+        @include media('<960px') {
+          font-size: 14px;
+        }
+
+        img {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+
+  &__amount {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 52px;
+
+    @include media('<960px') {
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 42px;
+
+    color: $accent-color;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include media('<960px') {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+  }
+
+  &__rating, &__reviews {
+    display: block;
+
+    color: $accent-color;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include media('<960px') {
+      font-size: 14px;
+    }
+
+    span {
+      color: $text-color-light;
+      font-weight: 700;
+    }
+  }
+
+  a {
+    font-size: 18px;
+    line-height: 27px;
+
+    @include media('<960px') {
+      font-size: 14px;
+    }
+  }
+
+  &__click {
+    display: block;
+    margin: 15px 15px 0;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 28px;
+    height: 2px;
+
+    background: $click-color;
+    border-radius: 5px;
+    transform: translate(-50%, 0);
+
+    @include media('>=768px') {
+      display: none;
+    }
+  }
+}

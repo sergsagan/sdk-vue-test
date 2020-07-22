@@ -1,0 +1,44 @@
+@import 'variables';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+
+  &--active, &:hover {
+    .card__bg {
+      background: $text-color-light;
+      border-radius: 6px;
+      border: 3px solid $bg-btn;
+    }
+  }
+
+  &__bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 100px;
+    margin-bottom: 10px;
+
+    background: $card-bg;
+    border-radius: 6px;
+    border: 3px solid transparent;
+  }
+
+  &__name,
+  &__description  {
+    color: $dark-color;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  &__description {
+    color: lighten($dark-color, 15%);
+    font-weight: 400;
+  }
+}

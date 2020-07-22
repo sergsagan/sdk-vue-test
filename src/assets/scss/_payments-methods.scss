@@ -1,0 +1,55 @@
+@import 'variables';
+
+.payments-methods {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+
+  &__info {
+    position: fixed;
+
+    @include media('<768px') {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    @include media('>=768px') {
+      max-width: 200px;
+      padding: 36px 15px;
+    }
+
+    @include media('>=1024px') {
+      max-width: 260px;
+    }
+
+    @include media('>=1280px') {
+      max-width: 344px;
+      padding: 36px 45px 36px 29px;
+    }
+  }
+
+  &__payment {
+    flex-grow: 1;
+
+    @include media('<768px') {
+      margin-left: 0;
+      padding: 15px;
+    }
+
+    @include media('>=768px') {
+      margin-left: 230px;
+      padding: 15px;
+    }
+
+    @include media('>=1024px') {
+      margin-left: 280px;
+      padding: 36px;
+    }
+
+    @include media('>=1280px') {
+      margin-left: 418px;
+    }
+  }
+}

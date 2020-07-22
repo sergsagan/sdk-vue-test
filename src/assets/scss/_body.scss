@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input {
+  border-radius: 0;
+  outline: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+#app {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto 0 0;
+
+  font-family: 'Google Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  -webkit-appearance: none;
+  border: 0;
+}

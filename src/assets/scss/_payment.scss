@@ -1,0 +1,31 @@
+@import 'variables';
+
+.payment {
+  display: flex;
+  flex-direction: column;
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    color: $dark-color;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__limits {
+    color: $link-color;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include media('<768px') {
+      display: none;
+    }
+  }
+}

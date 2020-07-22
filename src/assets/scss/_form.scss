@@ -1,0 +1,231 @@
+@import 'variables';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  @include media('<600px') {
+    padding-bottom: 30px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 12px;
+    position: relative;
+
+    @include media('<600px') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__row-captcha {
+    margin-bottom: 24px;
+  }
+
+  &__row-agreement {
+    margin-bottom: 31px;
+  }
+
+  &__row-textarea {
+    align-items: flex-start;
+  }
+
+  &__label {
+    width: 29%;
+    margin-right: 18px;
+
+    color: $dark-color;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+
+    @include media('<1120px') {
+      font-size: 14px;
+    }
+
+    @include media('<600px') {
+      width: auto;
+      font-size: 12px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    width: 44%;
+
+    @include media('<600px') {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &--amount {
+      width: 44%;
+      position: relative;
+
+      @include media('<600px') {
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    width: 44%;
+    height: 42px;
+    padding: 0 7px 0 16px;
+
+    color: $dark-color;
+    font-size: 16px;
+    font-weight: 700;
+
+    border: 2px solid $border-color;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: 0.3s border;
+
+    @include media('<600px') {
+      width: 100%
+    }
+
+    &:focus {
+      border: 2px solid $bg-btn;
+    }
+
+    &--icon-lang {
+      position: absolute;
+      top: 13px;
+      right: 10px;
+      z-index: 10;
+
+      color: $border-color;
+      font-size: 14px;
+    }
+
+    &-amount {
+      width: 100%;
+      border: 2px solid $other-bg;
+      background: $other-bg;
+
+      &:before {
+        content: 'USD';
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &-captcha {
+      width: 70%;
+    }
+  }
+
+  textarea {
+    width: 68%;
+    min-height: 137px;
+    padding: 12px 16px;
+    outline: none;
+
+    @include media('<600px') {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: #B3B3B3;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include media('<1120px') {
+        font-size: 14px;
+      }
+
+      @include media('<600px') {
+        font-size: 12px;
+      }
+    }
+
+    &:focus {
+      border: 2px solid $bg-btn;
+    }
+  }
+
+  &__description {
+    display: block;
+    color: $other2-color;
+    text-align: left;
+
+    @include media('<600px') {
+      width: 120px;
+      position: absolute;
+      top: -10px;
+      right: 0;
+
+      font-size: 11px;
+      line-height: 15px;
+    }
+
+    @include media('>=600px') {
+      width: 22%;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    @include media('>=1280px') {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__captcha-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 82px;
+    height: 42px;
+    margin-left: 10px;
+
+    background: $other-bg;
+    border-radius: 6px;
+  }
+
+  &__agreement {
+    width: 68%;
+
+    color: #000000;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: left;
+
+    @include media('<1120px') {
+      font-size: 13px;
+    }
+
+    @include media('<600px') {
+      width: 100%;
+    }
+
+    a {
+      color: $bg-btn;
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    max-width: 210px;
+
+    @include media('<600px') {
+      max-width: 95%;
+      margin: auto;
+      position: fixed;
+      top: auto;
+      right: 0;
+      left: 0;
+      bottom: 15px;
+      z-index: 2;
+    }
+  }
+}

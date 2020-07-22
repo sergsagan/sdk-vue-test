@@ -1,0 +1,21 @@
+@import 'variables';
+
+.select  {
+  height: 43px;
+  margin-bottom: 30px;
+
+  color: #231F1F;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid $border-color;
+  background: none;
+  outline: none;
+
+  &:focus {
+    border: 2px solid $bg-btn;
+  }
+
+  @include media('>=768px') {
+    display: none;
+  }
+}
